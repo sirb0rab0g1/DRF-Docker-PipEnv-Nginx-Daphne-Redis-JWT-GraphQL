@@ -9,15 +9,21 @@
 ## To stop and remove the dockerize environment
 `make down`
 
-[Docker](https://docs.docker.com/compose/) deployment of applications inside software containers
+### [Docker](https://docs.docker.com/compose/) <br />
+deployment of applications inside software containers
 
-[Django Rest Framework](https://www.django-rest-framework.org/) Browsable api
+### [Django Rest Framework](https://www.django-rest-framework.org/) <br />
+Browsable api
 
-[PipEnv](https://pipenv.readthedocs.io/) for install dependencies
+### [PipEnv](https://pipenv.readthedocs.io/) <br /> 
+For installing dependencies
 
-[Nginx](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) as proxy
+### [Nginx](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) <br /> 
+As proxy
 
-[Daphne](https://github.com/django/daphne) as the interface server
+### [Daphne](https://github.com/django/daphne) <br /> 
+As the interface server
 
-[Redis](http://docs.celeryproject.org/en/latest/getting-started/brokers/redis.html) as the backend
+### [Redis](http://docs.celeryproject.org/en/latest/getting-started/brokers/redis.html) <br /> 
+As the backend
 
