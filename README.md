@@ -1,19 +1,23 @@
 # Drf-Docker-PipEnv-Nginx-Daphne-Redis
 
-make local # for building local development
+##For building local development
+`make local`
 
-make up # to start and create the dockerize environment
+##To start and create the dockerize environment
+`make up`
 
-make down # to stop and remove the dockerize environment
+To stop and remove the dockerize environment
+`make down`
 
-install dependencies using pipenv__ 
-https://pipenv.readthedocs.io/
+[Docker](https://docs.docker.com/compose/) deployment of applications inside software containers
 
-Nginx as proxy__
-https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/
+[Django Rest Framework](https://www.django-rest-framework.org/) Browsable api
 
-Daphne as the interface server__
-https://github.com/django/daphne
+[PipEnv](https://pipenv.readthedocs.io/) for install dependencies
 
-Redis as the backend__
-http://docs.celeryproject.org/en/latest/getting-started/brokers/redis.html
+[Nginx](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) as proxy
+
+[Daphne](https://github.com/django/daphne) as the interface server
+
+[Redis](http://docs.celeryproject.org/en/latest/getting-started/brokers/redis.html) as the backend
+
