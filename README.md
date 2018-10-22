@@ -1,12 +1,12 @@
 # Drf-Docker-PipEnv-Nginx-Daphne-Redis
 
-##For building local development
+## For building local development
 `make local`
 
-##To start and create the dockerize environment
+## To start and create the dockerize environment
 `make up`
 
-To stop and remove the dockerize environment
+## To stop and remove the dockerize environment
 `make down`
 
 [Docker](https://docs.docker.com/compose/) deployment of applications inside software containers
