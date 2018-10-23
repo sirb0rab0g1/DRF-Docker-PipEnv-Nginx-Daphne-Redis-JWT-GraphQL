@@ -25,7 +25,7 @@ As proxy
 As the interface server
 
 ### [Channels](https://channels.readthedocs.io/en/latest/)
-Asynchronous mode but handling connections and sockets asynchronously
+Handling connections and sockets asynchronously
 
 ### [Redis](http://docs.celeryproject.org/en/latest/getting-started/brokers/redis.html) <br /> 
 As the backend
