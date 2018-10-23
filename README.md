@@ -9,6 +9,17 @@
 ## To stop and remove the dockerize environment
 `make down`
 
+## To makemigrations
+`make migrations name=` then the name you want to commit
+
+## To migrate
+`make migrate`
+
+## To GET/POST/PATCH navigate to
+[http://localhost:8000/api/basic/information/](http://localhost:8000/api/basic/information/)
+
+# FEATURES!!
+
 ### [Docker](https://docs.docker.com/compose/) <br />
 deployment of applications inside software containers
 

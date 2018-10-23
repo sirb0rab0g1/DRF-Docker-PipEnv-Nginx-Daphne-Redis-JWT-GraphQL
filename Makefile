@@ -9,6 +9,14 @@ backend: ## Start the api and nginx container
 	@echo "\033[92mStarting an environment for local development...\033[0m"
 	docker-compose up --build nginx
 
+migrations: # ex. make migrations name=name_to_commit
+	@echo "\033[92mMaking Migrations with a name of $(name) ...\033[0m"
+	docker-compose run api python manage.py makemigrations --name $(name)
+
+migrate:
+	@echo "\033[92mStart Migrating...\033[0m"
+	docker-compose run api python manage.py migrate
+
 up:
 	@echo "\033[92mStarting api container for local development...\033[0m"
 	docker-compose up
