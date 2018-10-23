@@ -51,12 +51,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'annoying',
     'whitenoise.runserver_nostatic',
-
     'corsheaders',
     'rest_framework',
     'requests',
-    'channels'
+    'channels',
 ]
 
 MIDDLEWARE = [

@@ -15,6 +15,7 @@ channels-redis = "*"
 channels = "*"
 twisted = "*"
 whitenoise = "*"
+django-annoying = "*"
 
 [dev-packages]
 

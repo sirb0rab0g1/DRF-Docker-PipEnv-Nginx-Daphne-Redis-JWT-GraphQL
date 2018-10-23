@@ -24,6 +24,11 @@ As proxy
 ### [Daphne](https://github.com/django/daphne) <br /> 
 As the interface server
 
+### [Channels](https://channels.readthedocs.io/en/latest/)
+Asynchronous mode but handling connections and sockets asynchronously
+
 ### [Redis](http://docs.celeryproject.org/en/latest/getting-started/brokers/redis.html) <br /> 
 As the backend
 
+### [Annoying](https://github.com/skorokithakis/django-annoying) <br />
+This django application eliminates certain annoyances in the Django framework.
