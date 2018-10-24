@@ -10,4 +10,4 @@ class UserProfileAdmin(admin.ModelAdmin):
         'user__email',
     )
 
-    # list_display = ('user')
+    list_display = ('user')
