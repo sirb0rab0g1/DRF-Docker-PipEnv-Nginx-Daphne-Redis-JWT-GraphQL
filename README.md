@@ -15,6 +15,10 @@
 ## To migrate
 `make migrate`
 
+# EXTRAS
+## To run a editor inside docker container using bpython
+`make editor`
+
 ## To GET/POST/PATCH navigate to
 [http://localhost:8000/api/basic/information/](http://localhost:8000/api/basic/information/)
 
