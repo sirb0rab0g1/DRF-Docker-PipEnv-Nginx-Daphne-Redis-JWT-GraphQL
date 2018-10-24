@@ -17,6 +17,18 @@ migrate:
 	@echo "\033[92mStart Migrating...\033[0m"
 	docker-compose run api python manage.py migrate
 
+superuser:
+	@echo "\033[92mCreating Super User...\033[0m"
+	docker-compose run api python manage.py createsuperuser
+
+install: #ex. make install name=name_of_package
+	@echo "\033[92mInstalling Pakcage $(name)...\033[0m"
+	pipenv install $(name)
+
+uninstall:
+	@echo "\033[92mUninstalling Pakcage $(name)...\033[0m"
+	pipenv uninstall $(name)
+
 up:
 	@echo "\033[92mStarting api container for local development...\033[0m"
 	docker-compose up

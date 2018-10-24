@@ -43,3 +43,6 @@ As the backend
 
 ### [Annoying](https://github.com/skorokithakis/django-annoying) <br />
 This django application eliminates certain annoyances in the Django framework.
+
+### [JWT Json Web Token](https://github.com/GetBlimp/django-rest-framework-jwt) <br />
+Unlike some more typical uses of JWTs, this module only generates authentication tokens that will verify the user who is requesting one of your DRF protected API resources.
