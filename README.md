@@ -15,12 +15,20 @@
 ## To migrate
 `make migrate`
 
+# How to
+
+## After building your local development you must create a superuser account
+`make superuser` required because of JWT authentication
+
+## Then login in django admin
+[http://localhost:8000/api/admin/](http://localhost:8000/api/admin)
+
+## After a successful login navigate to
+[http://localhost:8000/api/basic/information/](http://localhost:8000/api/basic/information/)
+
 # EXTRAS
 ## To run a editor inside docker container using bpython
 `make editor`
-
-## To GET/POST/PATCH navigate to
-[http://localhost:8000/api/basic/information/](http://localhost:8000/api/basic/information/)
 
 # FEATURES!!
 
