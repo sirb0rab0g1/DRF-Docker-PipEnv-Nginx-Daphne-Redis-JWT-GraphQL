@@ -35,3 +35,7 @@ up:
 
 down:  ## Stop docker containers
 	docker-compose down ${args}
+
+editor:
+	@echo "\033[92mOpening bpython editor...\033[0m"
+	docker-compose run api python manage.py shell -i bpython
