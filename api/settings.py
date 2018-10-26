@@ -38,7 +38,7 @@ SECRET_KEY = env.str('SECRET_KEY', default='unw(vm!h_n!jkd8al0_$wvo^*5=#ws%1ak4e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DEBUG', default=True)
 
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost', '192.168.0.105'])
+ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost'])
 
 
 # Application definition
@@ -167,16 +167,12 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CORS_ORIGIN_WHITELIST = (
     'localhost:8000',
-    'localhost:4200',
-    '192.168.0.105:4200',
-    '192.168.0.105:8000'
+    'localhost:4200'
 )
 
 CSRF_TRUSTED_ORIGINS = [
     'localhost:8000',
-    'localhost:4200',
-    '192.168.0.105:4200',
-    '192.168.0.105:8000'
+    'localhost:4200'
 ]
 
 CORS_ALLOW_METHODS = (
