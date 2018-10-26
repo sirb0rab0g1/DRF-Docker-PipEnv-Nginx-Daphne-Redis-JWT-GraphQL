@@ -75,3 +75,18 @@ Unlike some more typical uses of JWTs, this module only generates authentication
 * I'm getting `ERROR: Get https://registry-1.docker.io/v2/: dial tcp: lookup registry-1.docker.io ... : read: connection refused` error.
 
     * Do `docker-machine ssh default`, then edit the resolve file `sudo vi /etc/resolv.conf` change the nameserver value to `1.1.1.1` or `8.8.8.8`
+    
+* : Bind for 0.0.0.0:5432 failed: port is already allocated
+    
+    * `Docker ps`
+    * after that this will showen up <br />
+    ```13b484047582        postgres:9.6.5-alpine   "docker-entrypoint.s…"   28 hours ago        Up 5 hours          0.0.0.0:5432->5432/tcp   docsan_docsan-db_1```
+    
+    * the conflict is ```0.0.0.0:5432->5432/tcp```
+    * we need to stop the docker container first
+    * `$ docker stop 13b484047582`
+    * then remove 
+    * `$ docker remove 13b484047582`
+
+    
+    
