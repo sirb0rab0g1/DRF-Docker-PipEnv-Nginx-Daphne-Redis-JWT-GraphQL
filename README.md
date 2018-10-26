@@ -78,15 +78,17 @@ Unlike some more typical uses of JWTs, this module only generates authentication
     
 * : Bind for 0.0.0.0:5432 failed: port is already allocated
     
-    * `Docker ps`
+    * `docker ps`
     * after that this will showen up <br />
-    ```13b484047582        postgres:9.6.5-alpine   "docker-entrypoint.s…"   28 hours ago        Up 5 hours          0.0.0.0:5432->5432/tcp   docsan_docsan-db_1```
+    ```13b484047582        postgres:9.6.5-alpine   "docker-entrypoint.s…"   28 hours ago        Up 5 hours          0.0.0.0:5432->5432/tcp   sample_db```
     
     * the conflict is ```0.0.0.0:5432->5432/tcp```
     * we need to stop the docker container first
     * `$ docker stop 13b484047582`
     * then remove 
     * `$ docker remove 13b484047582`
+    * then re run the environment
+    * `$ make local(rebuilding container) / make up(starting container)`
 
     
     
