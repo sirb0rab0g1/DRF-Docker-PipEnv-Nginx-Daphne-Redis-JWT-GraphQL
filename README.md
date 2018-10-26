@@ -1,5 +1,15 @@
 # Drf-Docker-PipEnv-Nginx-Daphne-Redis
 
+## Prerequisites
+
+1. Must have [Docker](https://www.docker.com/get-started) installed.
+
+## Pre-setup
+
+1. Change/duplicate `.env.tpl` to `.env` and edit the values inside accordingly
+
+------------------------------
+
 ## For building local development
 `make local`
 
@@ -38,19 +48,19 @@ deployment of applications inside software containers
 ### [Django Rest Framework](https://www.django-rest-framework.org/) <br />
 Browsable api
 
-### [PipEnv](https://pipenv.readthedocs.io/) <br /> 
+### [PipEnv](https://pipenv.readthedocs.io/) <br />
 For installing dependencies
 
-### [Nginx](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) <br /> 
+### [Nginx](https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/) <br />
 As proxy
 
-### [Daphne](https://github.com/django/daphne) <br /> 
+### [Daphne](https://github.com/django/daphne) <br />
 As the interface server
 
 ### [Channels](https://channels.readthedocs.io/en/latest/)
 Handling connections and sockets asynchronously
 
-### [Redis](http://docs.celeryproject.org/en/latest/getting-started/brokers/redis.html) <br /> 
+### [Redis](http://docs.celeryproject.org/en/latest/getting-started/brokers/redis.html) <br />
 As the backend
 
 ### [Annoying](https://github.com/skorokithakis/django-annoying) <br />
@@ -58,3 +68,10 @@ This django application eliminates certain annoyances in the Django framework.
 
 ### [JWT Json Web Token](https://github.com/GetBlimp/django-rest-framework-jwt) <br />
 Unlike some more typical uses of JWTs, this module only generates authentication tokens that will verify the user who is requesting one of your DRF protected API resources.
+
+
+### FAQ
+
+* I'm getting `ERROR: Get https://registry-1.docker.io/v2/: dial tcp: lookup registry-1.docker.io ... : read: connection refused` error.
+
+    * Do `docker-machine ssh default`, then edit the resolve file `sudo vi /etc/resolv.conf` change the nameserver value to `1.1.1.1` or `8.8.8.8`
