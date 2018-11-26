@@ -1,6 +1,5 @@
 from graphene_django import DjangoObjectType
 from .models import BasicInformation
-from django.contrib.auth.models import User
 import graphene
 
 class Basic(DjangoObjectType):
