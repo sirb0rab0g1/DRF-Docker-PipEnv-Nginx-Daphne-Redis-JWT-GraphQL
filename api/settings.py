@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'requests',
     'channels',
+    'graphene_django'
 ]
 
 MIDDLEWARE = [
