@@ -11,7 +11,7 @@ class Information(DjangoObjectType):
 class Basic(DjangoObjectType):
     class Meta:
         model = BasicInformation
-a
+
 class Query(graphene.ObjectType):
     users = graphene.List(Basic)
 
