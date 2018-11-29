@@ -74,7 +74,7 @@ Primary focus here is to give a good understanding of how to connect models from
 
 ### FAQ
 * TypeError: 'module' object is not callable
-This is cause buy django 3.7 and pipenv 18.1 version. So to fix this 
+This is cause by django 3.7 and pipenv 18.1 version. So to fix this 
 
 	* `pip install pipenv`
 	* `pipenv run pip install pip==18.0`
@@ -84,7 +84,7 @@ This is cause buy django 3.7 and pipenv 18.1 version. So to fix this
 
     * Do `docker-machine ssh default`, then edit the resolve file `sudo vi /etc/resolv.conf` change the nameserver value to `1.1.1.1` or `8.8.8.8`
     
-* : Bind for 0.0.0.0:5432 failed: port is already allocated
+* : Bind for `0.0.0.0:5432` failed: port is already allocated
     
     * `docker ps`
     * after that this will showen up <br />
