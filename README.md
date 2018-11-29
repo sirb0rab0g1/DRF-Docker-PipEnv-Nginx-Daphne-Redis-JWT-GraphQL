@@ -69,6 +69,8 @@ This django application eliminates certain annoyances in the Django framework.
 ### [JWT Json Web Token](https://github.com/GetBlimp/django-rest-framework-jwt) <br />
 Unlike some more typical uses of JWTs, this module only generates authentication tokens that will verify the user who is requesting one of your DRF protected API resources.
 
+### [Graphne](http://docs.graphene-python.org/projects/django/en/latest/) <br />
+Primary focus here is to give a good understanding of how to connect models from Django ORM to graphene object types.
 
 ### FAQ
 * TypeError: 'module' object is not callable
