@@ -17,6 +17,7 @@ twisted = "*"
 whitenoise = "*"
 django-annoying = "*"
 djangorestframework-jwt = "*"
+graphene-django = "*"
 
 [dev-packages]
 

@@ -10,7 +10,10 @@
 
 ------------------------------
 
-## For building local development
+## 1. First migrate the database
+`make migrate`
+
+## 2. For building local development
 `make local`
 
 ## To start and create the dockerize environment
@@ -21,9 +24,6 @@
 
 ## To makemigrations
 `make migrations name=` then the name you want to commit
-
-## To migrate
-`make migrate`
 
 # How to
 
@@ -71,6 +71,12 @@ Unlike some more typical uses of JWTs, this module only generates authentication
 
 
 ### FAQ
+* TypeError: 'module' object is not callable
+This is cause buy django 3.7 and pipenv 18.1 version. So to fix this 
+
+	* `pip install pipenv`
+	* `pipenv run pip install pip==18.0`
+	* `pipenv install`
 
 * I'm getting `ERROR: Get https://registry-1.docker.io/v2/: dial tcp: lookup registry-1.docker.io ... : read: connection refused` error.
 
