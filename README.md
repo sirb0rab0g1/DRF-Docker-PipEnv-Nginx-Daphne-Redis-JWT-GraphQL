@@ -36,6 +36,9 @@
 ## After a successful login navigate to
 [http://localhost:8000/api/basic/information/](http://localhost:8000/api/basic/information/)
 
+## To test a graphql by graphqil interface navigate to 
+[http://localhost:8000/api/basic/graphiql](http://localhost:8000/api/basic/graphiql)
+
 # EXTRAS
 ## To run a editor inside docker container using bpython
 `make editor`
