@@ -1,4 +1,3 @@
-"""
 from django.contrib import admin
 
 from .models import BasicInformation
@@ -11,5 +10,4 @@ class UserProfileAdmin(admin.ModelAdmin):
         'user__email',
     )
 
-    list_display = ('user')
-"""
+    list_display = ['user']

@@ -9,8 +9,8 @@ services:
       context: .
       dockerfile: Dockerfile.nginx
     restart: always
-    image: starter-nginx
-    container_name: starter-nginx
+    image: starter-graphene-nginx
+    container_name: starter-graphene-nginx
     depends_on:
       - api
     env_file:
@@ -28,18 +28,18 @@ services:
     command: -c fsync=off -c synchronous_commit=off -c full_page_writes=off
 
   redis:
-    container_name: starter_redis
+    container_name: starter_graphene_redis
     image: redis:latest
     restart: always
 
   api:
     build: .
-    image: starter-api
-    container_name: starter-api
+    image: starter-graphene-api
+    container_name: starter-graphene-api
     volumes:
       - type: bind
         source: .
-        target: /starter-api
+        target: /starter-graphene-api
     restart: always
     depends_on:
       - db

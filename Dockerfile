@@ -6,7 +6,7 @@ ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1
 
 MAINTAINER Pasmo
 
-RUN mkdir /starter-api && \
+RUN mkdir /starter-graphene-api && \
     mkdir /srv/logs
 
 RUN set -xe \
@@ -23,9 +23,9 @@ RUN LIBRARY_PATH=/lib:/usr/lib /bin/sh -c "pipenv install --system --dev" \
     && rm -rf ~/.cache/pip \
   && chmod +x scripts.sh
 
-COPY . /starter-api/
+COPY . /starter-graphene-api/
 
-WORKDIR /starter-api
+WORKDIR /starter-graphene-api
 
 EXPOSE 8000
 

@@ -26,20 +26,21 @@ env = environ.Env(
 # reading .env file
 environ.Env.read_env()
 
-
 ENV = env.str('ENV', default='local')  # noqa
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env.str('SECRET_KEY', default='unw(vm!h_n!jkd8al0_$wvo^*5=#ws%1ak4elr=auru%wjoi4e')  # noqa
+SECRET_KEY = env('SECRET_KEY')  # noqa
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DEBUG', default=True)
 
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS', default=['localhost'])
+HOSTS = [env('LOCAL_HOST'),env('IP_HOST')]
+CORS = [env('INTERNAL'),env('EXTERNAL')]
 
+ALLOWED_HOSTS = HOSTS
 
 # Application definition
 
@@ -55,9 +56,10 @@ INSTALLED_APPS = [
     'whitenoise.runserver_nostatic',
     'corsheaders',
     'rest_framework',
-    'requests',
     'channels',
-    'graphene_django'
+    'graphene_django',
+
+    'requests'
 ]
 
 MIDDLEWARE = [
@@ -107,7 +109,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'api.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
@@ -116,7 +117,7 @@ DATABASES = {
     'default': env.db(),  # noqa F821
 }
 
-REDIS_URL = env.str('REDIS_URL', default="redis://localhost:6379")
+# REDIS_URL = env.str('REDIS_URL', default="redis://localhost:6379")
 
 # Password validation
 # https://docs.djangoproject.com/en/2.0/ref/settings/#auth-password-validators
@@ -161,20 +162,13 @@ STATIC_ROOT = base('staticfiles')
 
 STATICFILES_DIRS = [
     base('static')
-
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-CORS_ORIGIN_WHITELIST = (
-    'localhost:8000',
-    'localhost:4200'
-)
+CORS_ORIGIN_WHITELIST = CORS
 
-CSRF_TRUSTED_ORIGINS = [
-    'localhost:8000',
-    'localhost:4200'
-]
+CSRF_TRUSTED_ORIGINS = CORS
 
 CORS_ALLOW_METHODS = (
     'DELETE',
@@ -201,7 +195,7 @@ CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
         "CONFIG": {
-            "hosts": [REDIS_URL],
+            "hosts": [env('REDIS_URL')],
         },
     },
 }
