@@ -37,8 +37,8 @@ SECRET_KEY = env('SECRET_KEY')  # noqa
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DEBUG', default=True)
 
-HOSTS = [env('LOCAL_HOST'),env('IP_HOST')]
-CORS = [env('INTERNAL'),env('EXTERNAL')]
+HOSTS = env.list('HOSTS')
+CORS = env.list('HOSTS')
 
 ALLOWED_HOSTS = HOSTS
 

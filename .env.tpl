@@ -6,3 +6,5 @@ LOCAL_HOST=localhost
 EXTERNAL=192.168.0.147:8000
 INTERNAL=localhost:8000
 REDIS_URL=redis://localhost:6379
+HOSTS=192.168.0.147,localhost
+CORS=192.168.0.147:8000,localhost:8000
