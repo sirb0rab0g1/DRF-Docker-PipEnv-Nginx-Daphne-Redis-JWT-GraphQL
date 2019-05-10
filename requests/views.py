@@ -36,7 +36,7 @@ class BasicInformationViewSet(viewsets.ModelViewSet):
             return self.get_paginated_response(serializer.data)
 
         serializer = self.get_serializer(queryset, many=True)
-        return Response(self.add_rank(serializer.data))
+        return Response(serializer.data)
 
 
 class UserProfileViewSet(viewsets.ModelViewSet):
@@ -52,7 +52,7 @@ class UserProfileViewSet(viewsets.ModelViewSet):
             return self.get_paginated_response(serializer.data)
 
         serializer = self.get_serializer(queryset, many=True)
-        return Response(self.add_rank(serializer.data))
+        return Response(serializer.data)
 
 
 class LoginViewSet(views.APIView):
