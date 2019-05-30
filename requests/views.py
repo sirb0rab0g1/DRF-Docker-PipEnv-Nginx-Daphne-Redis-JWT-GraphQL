@@ -67,7 +67,7 @@ class LoginViewSet(views.APIView):
         if serializer.is_valid():
             user = serializer.get_user(data['username'])
             return Response({
-                'user': UserProfileSerializer(user).data,
+                'user': UserSerializer(user).data,
                 'token': generate_jwt_token(user)
             })
         else:
