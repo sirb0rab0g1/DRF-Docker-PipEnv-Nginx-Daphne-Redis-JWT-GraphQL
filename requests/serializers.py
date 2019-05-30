@@ -1,3 +1,4 @@
+from django.contrib.auth import authenticate
 from rest_framework import serializers
 from django.contrib.auth.models import User
 from .models import (
@@ -5,7 +6,7 @@ from .models import (
 )
 from rest_framework.validators import UniqueValidator
 from django.db import transaction
-
+from django.db.models import Q
 
 class BasicInformationSerializer(serializers.ModelSerializer):
     class Meta:
