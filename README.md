@@ -79,6 +79,10 @@ This is cause by django 3.7 and pipenv 18.1 version. So to fix this
 	* `pip install pipenv`
 	* `pipenv run pip install pip==18.0`
 	* `pipenv install`
+    
+    or just type
+    
+    * `make fix`
 
 * I'm getting `ERROR: Get https://registry-1.docker.io/v2/: dial tcp: lookup registry-1.docker.io ... : read: connection refused` error.
 
