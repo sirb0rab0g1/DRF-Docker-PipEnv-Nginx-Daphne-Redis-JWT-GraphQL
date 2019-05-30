@@ -10,7 +10,6 @@ markdown = "*"
 django-filter = "*"
 django-cors-headers = "*"
 django-environ = "*"
-"psycopg2" = "*"
 channels-redis = "*"
 channels = "*"
 twisted = "*"
@@ -18,6 +17,8 @@ whitenoise = "*"
 django-annoying = "*"
 djangorestframework-jwt = "*"
 graphene-django = "*"
+"psycopg2-binary" = "*"
+pillow = "*"
 
 [dev-packages]
 

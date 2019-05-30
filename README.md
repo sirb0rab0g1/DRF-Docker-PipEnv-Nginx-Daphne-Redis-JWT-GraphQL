@@ -10,14 +10,11 @@
 
 ------------------------------
 
-## 1. First migrate the database
-`make migrate`
+## 1. First to install pipenv version 18.0
+`make fix`
 
 ## 2. For building local development
 `make local`
-
-## To start and create the dockerize environment
-`make up`
 
 ## To stop and remove the dockerize environment
 `make down`

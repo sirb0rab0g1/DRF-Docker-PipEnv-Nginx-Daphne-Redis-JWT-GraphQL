@@ -39,3 +39,8 @@ down:  ## Stop docker containers
 editor:
 	@echo "\033[92mOpening bpython editor...\033[0m"
 	docker-compose run api python manage.py shell -i bpython
+
+fix: # this command after installing certain 3rd party
+	pip install pipenv
+	pipenv run pip install pip==18.0
+	pipenv install
